@@ -11,7 +11,7 @@ int main()
 
 	for (double j; j < foo_max_size; ++j) //It correctly prints without this for loop, but doesn't print anything with the for loop
 	{
-		for (double i; i < foo.size(); ++i)
+		for (double i; i < foo.size(); ++i) //Double because it doesn't work with int, as variable i doesn't initialize correctly
 		{
 			if (foo[i] < smallest_num)
 			{
