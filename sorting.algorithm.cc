@@ -3,37 +3,37 @@
 
 int main()
 {
-	std::vector<int> foo {3, 2, 5, 1, 4}; //Vector that holds pre-sorted numbers
-	std::vector<int> goo {};              //Vector that holds sorted numbers
+	std::vector<int> pre_sort_nums {3, 2, 5, 1, 4};  //Vector that holds pre-sorted numbers
+	std::vector<int> post_sort_nums {};              //Vector that holds sorted numbers
 	
-	int smallest_num = {foo[0]};
-	int foo_max_size = foo.size();
+	int smallest_num = {pre_sort_nums[0]};
+	int pre_sort_nums_max_size = pre_sort_nums.size();
 
-	for (double j; j < foo_max_size; ++j) //It correctly prints without this for loop, but doesn't print anything with the for loop
+	for (int j = 0; j < pre_sort_nums_max_size; ++j) //It correctly prints without this for loop, but doesn't print anything with the for loop
 	{
-		for (double i; i < foo.size(); ++i) //Double because it doesn't work with int, as variable i doesn't initialize correctly
+		for (int i = 0; i < pre_sort_nums.size(); ++i)
 		{
-			if (foo[i] < smallest_num)
+			if (pre_sort_nums[i] < smallest_num)
 			{
-				smallest_num = foo[i];
+				smallest_num = pre_sort_nums[i];
 			}
 			
 		}
 		
-		for (double i; i < foo.size(); ++i)
+		for (int i = 0; i < pre_sort_nums.size(); ++i)
 		{
-			if (foo[i] == smallest_num)
+			if (pre_sort_nums[i] == smallest_num)
 			{
-				foo.erase(foo.begin() + i);
+				pre_sort_nums.erase(pre_sort_nums.begin() + i);
 				
 			}
 		}
-		goo.emplace_back(smallest_num);
+		post_sort_nums.emplace_back(smallest_num);
 	}
 
-  for (double i; i < goo.size(); ++i)
+  for (int i = 0; i < post_sort_nums.size(); ++i)
   {
-    std::cout<<goo[i]<<"\n";
+    std::cout<<post_sort_nums[i]<<"\n";
   }
 
 	return 0;
