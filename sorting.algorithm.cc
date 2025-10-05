@@ -9,7 +9,7 @@ int main()
 	int smallest_num = {pre_sort_nums[0]};
 	int pre_sort_nums_max_size = pre_sort_nums.size();
 
-	for (int j = 0; j < pre_sort_nums_max_size; ++j) //It correctly prints without this for loop, but doesn't print anything with the for loop
+	for (int j = 0; j < pre_sort_nums_max_size; ++j)
 	{
 		for (int i = 0; i < pre_sort_nums.size(); ++i)
 		{
