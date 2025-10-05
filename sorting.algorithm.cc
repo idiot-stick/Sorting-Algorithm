@@ -29,11 +29,11 @@ int main()
 			}
 		}
 		post_sort_nums.emplace_back(smallest_num);
-	}
+  	}
 
   for (int i = 0; i < post_sort_nums.size(); ++i)
   {
-    std::cout<<post_sort_nums[i]<<"\n";
+    	std::cout<<post_sort_nums[i]<<"\n";
   }
 
 	return 0;
