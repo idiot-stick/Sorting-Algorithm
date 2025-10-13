@@ -1,3 +1,4 @@
+//Works fine actually, it's just a problem in the logic
 #include <iostream>
 
 int sort(int side_a, int side_b, int side_c)
