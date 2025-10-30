@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <string>
 
 typedef std::vector<std::vector<char>> grid_t;
 
@@ -38,15 +39,28 @@ int main()
   
   int x {};
   int y {};
+  std::string win {};
   
-  std::cout<<"\nType your x coordinate\n\n";
-  std::cin>>x;
-  std::cout<<"\nType your y coordinate\n\n";
-  std::cin>>y;
-  
-  grid[x - 1][y - 1] = 'X';
-  
-  print (grid);
+  do
+  {
+    std::cout<<"\nType your x coordinate\n\n";
+    std::cin>>x;
+    std::cout<<"\nType your y coordinate\n\n";
+    std::cin>>y;
+    
+    grid[y - 1][x - 1] = 'X';
+    
+    print(grid);
+    
+    for (int i = 0; i < 3; ++i)
+    {
+      if ((grid[i][0] == 'X' && grid[i][1] == 'X' && grid[i][2] == 'X') || (grid[0][i] == 'X' && grid[1][i] == 'X' && grid[2][i] == 'X'))
+      {
+        win = "True";
+      }
+    } 
+    
+  } while(win != "True");
   
   return 0;
 }
